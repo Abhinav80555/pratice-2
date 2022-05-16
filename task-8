@@ -1,0 +1,81 @@
+//1  Write a piece of code that creates an instance of the class Movie with the 
+//   title “Casino Royale”, the studio “Eon Productions”, and the rating “PG¬13”
+
+class Movie {
+    constructor(title, studio , rating = "PG"){
+        this.title = title;
+        this.studio = studio;
+        this.rating = rating;
+    }
+
+    get pg(){
+        return this.rating;
+    }
+}
+
+let mov = new Movie('Casino Royale','Eon Productions', 'PG-13')
+
+console.log(mov.pg);
+
+
+
+//2  https://github.com/rvsp/typescript-oops/blob/master/Practice/class-circle.md 
+
+class Circle {
+  constructor(radius,color){
+    this.radius = radius;
+    this.color = color;
+  }
+  getRadius(){return this.radius}
+  getColor(){return this.color}
+  getArea(){return Math.PI * Math.pow(this.radius,2)}
+  getCircumference(){return 2 * Math.PI * this.radius}
+}
+const newCircle = new Circle(3,"yellow");
+console.log(newCircle.getRadius());
+console.log(newCircle.getColor());
+console.log(newCircle.getArea());
+console.log(newCircle.getCircumference());
+
+
+
+
+//3 write a class to calculate uber price
+
+class Person {
+    constructor(name , age , address, phone)
+    {
+        this.address=address;
+        this.name=name;
+        this.age=age;
+        this.phone=phone;
+    }
+    printDetails() {
+        console.log("Name "+this.name+" age "+this.age+" address "+ this.address+" phone "+this.phone);
+    }
+
+}
+let Sumanth= new Person("sumanth","25","chennai","9876543210");
+ console.log(Sumanth);
+ Sumanth.printDetails();
+
+
+
+
+
+//4 write a class to calculate uber price
+
+class Uber {
+  constructor(name,location,distance){
+    this.name = name;
+    this.location = location
+    this.distance = distance;
+  }
+  getPrice(){
+    var pricePerKm = 3;
+    return `Fare is ${this.distance * pricePerKm}/-` ;
+  }
+}
+
+const user1 = new Uber("Karthi","Chennai",23);
+console.log(user1.getPrice());
